@@ -1,3 +1,4 @@
-.request, .choose{
-	background-attachment: scroll;
+.form-block .form{
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/border.png', sizingMethod='scale');
 }
