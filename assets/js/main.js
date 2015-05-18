@@ -26,11 +26,12 @@ $(document).ready(function() {
 		pager: 'true',
 		controls: false,
 		adaptiveHeight: false,
+		useCSS: true,
 		onSliderLoad: function () {
 			$('.bxslider>li').eq(0).addClass('active-slide').find('.slider__info').animate({height: '700', opacity: '1'}, 2500, 'easeInCubic');
 		},
 		onSlideAfter: function (currentSlideNumber, totalSlideQty, currentSlideHtmlObject) {
-			$('.bxslider>li').eq(currentSlideHtmlObject ).addClass('active-slide').siblings().removeClass('active-slide');
+			$('.bxslider>li').eq(currentSlideHtmlObject ).addClass('active-slide').siblings().removeClass('active-slide').find('.slider__info').css('height', '0').css('opacity', '0');
 			$('.bxslider>li').eq(currentSlideHtmlObject ).find('.slider__info').animate({height: '700', opacity: '1'}, 2500, 'easeInCubic');
 		},
 	 }).mouseenter(function(){
@@ -54,6 +55,27 @@ $(document).ready(function() {
 	}).mouseleave(function(){
 		slider.startAuto();
 	});
+
+	// Reveal.initialize({
+	// 			controls: true,
+	// 			progress: true,
+	// 			history: true,
+	// 			center: true,
+
+	// 			mouseWheel: true,
+
+	// 			transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+	// 			// Optional reveal.js plugins
+	// 			dependencies: [
+	// 				{ src: 'classList.js', condition: function() { return !document.body.classList; } },
+	// 				// { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+	// 				// { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+	// 				// { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+	// 				// { src: 'plugin/zoom-js/zoom.js', async: true },
+	// 				// { src: 'plugin/notes/notes.js', async: true }
+	// 			]
+	// 		});
 
 	//Parallax
 	$(".form-top .box-inner").parallax({ speed : 0.1 });

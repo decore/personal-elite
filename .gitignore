@@ -2,3 +2,5 @@ build
 node_modules
 gulpfile.js
 package.json
+reveal
+box-slider

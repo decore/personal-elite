@@ -4183,6 +4183,7 @@ span.error {
   line-height: 1.1em;
   width: 350px;
   padding-bottom: 63px;
+  margin: 0 auto;
 }
 .no-js .slider-wrap {
   height: auto;
@@ -4420,6 +4421,13 @@ span.error {
 .footer-top .menu-footer .menu__item + .menu__item .menu__link {
   margin-left: 3px;
 }
+.footer-top .menu-footer .menu__item.active .button-3d {
+  transform: rotateX(89deg);
+  -webkit-transform: rotateX(89deg);
+  -moz-transform: rotateX(89deg);
+  -o-transform: rotateX(89deg);
+  -ms-transform: rotateX(89deg);
+}
 .footer-top .menu-footer .menu__item.active .menu__link {
   background: #ad6069;
   color: #ffffff;
@@ -4435,6 +4443,22 @@ span.error {
   background: #6b6b6b;
   color: #ffffff;
 }
+.footer-top .menu-footer .menu .front {
+  padding: 5px 10px 3px 9px;
+}
+.footer-top .menu-footer .menu .front a {
+  font-family: 'bebas_neue_regular';
+  letter-spacing: 1px;
+  font-size: 15px;
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 1px solid #a6a6a6;
+}
+.footer-top .menu-footer .menu .back a {
+  color: #ffffff;
+  text-decoration: none;
+  background: #6b6b6b;
+}
 .footer-top .info .info__address {
   color: #727272;
   font-size: 13px;
@@ -4447,6 +4471,9 @@ span.error {
 .footer-top .info .info__link {
   color: #ad6069;
 }
+.footer-top .info.info-left {
+  min-width: 213px;
+}
 .footer-top .button-styled {
   color: #000000;
   margin-left: 10px;
@@ -4454,6 +4481,8 @@ span.error {
 .footer-bottom {
   background: #fffae9;
   padding: 15px 0;
+  height: 60px;
+  overflow: hidden;
 }
 .footer-bottom .copy {
   font-size: 12px;
@@ -4465,6 +4494,13 @@ span.error {
 .footer-bottom .menu__item {
   margin-right: 10px;
 }
+.footer-bottom .menu__item.active .button-3d {
+  transform: rotateX(89deg);
+  -webkit-transform: rotateX(89deg);
+  -moz-transform: rotateX(89deg);
+  -o-transform: rotateX(89deg);
+  -ms-transform: rotateX(89deg);
+}
 .footer-bottom .menu__item.active .menu__link {
   color: #ffffff;
   background: #ad6069;
@@ -4475,8 +4511,35 @@ span.error {
   letter-spacing: 1px;
   padding: 5px 15px 3px;
   border-bottom: 1px solid #a6a6a6;
+  /*			&:hover{
+				background: @dark_grey;
+				color: @white;
+			}*/
 }
-.footer-bottom .menu__link:hover {
+.footer-bottom .menu .front {
+  padding: 5px 15px 3px;
+}
+.footer-bottom .menu .front a {
+  font-family: 'bebas_neue_regular';
+  letter-spacing: 1px;
+  font-size: 15px;
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 1px solid #a6a6a6;
+}
+.footer-bottom .menu .back a {
+  color: #ffffff;
+  text-decoration: none;
+  background: #6b6b6b;
+}
+.no-csstransforms .menu .back a,
+.no-csstransforms3d .menu .back a {
+  text-decoration: underline;
+  background: transparent;
+}
+.no-csstransforms .menu .back a:hover,
+.no-csstransforms3d .menu .back a:hover {
   background: #6b6b6b;
   color: #ffffff;
+  text-decoration: none;
 }

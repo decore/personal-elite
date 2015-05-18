@@ -15,9 +15,14 @@
 						margin-left: 3px;
 					}
 				}
-				&.active .menu__link{
-					background: @dark_red;
-					color: @white;
+				&.active{
+					.button-3d {
+						.transform(rotateX(89deg));
+					}
+					 .menu__link{
+						background: @dark_red;
+						color: @white;
+					}
 				}
 			}
 			&__link{
@@ -30,6 +35,22 @@
 					background: @dark_grey;
 					color: @white;
 				}
+			}
+			.front{
+				padding: 5px 10px 3px 9px;
+				a{
+					font-family: 'bebas_neue_regular';
+					letter-spacing: 1px;
+					font-size: 15px;
+					color: @black;
+					text-decoration: none;
+					border-bottom: 1px solid #a6a6a6;
+				}
+			}
+			.back a{
+				color: @white;
+				text-decoration: none;
+				background: @dark_grey;
 			}
 		}
 	}
@@ -46,6 +67,9 @@
 		.info__link{
 			color: @dark_red;
 		}
+		&.info-left{
+			min-width: 213px;
+		}
 	}
 	.button-styled{
 		color: @black;
@@ -55,6 +79,8 @@
 .footer-bottom{
 	background: #fffae9;
 	padding: 15px 0;
+	height: 60px;
+	overflow: hidden;
 	.copy{
 		font-size: 12px;
 		float: left;
@@ -65,9 +91,14 @@
 	.menu{
 		&__item{
 			margin-right: 10px;
-			&.active .menu__link{
-				color: @white;
-				background: @dark_red;
+			&.active{
+				.button-3d {
+					.transform(rotateX(89deg));
+				}
+				.menu__link{
+					color: @white;
+					background: @dark_red;
+				}
 			}
 		}
 		&__link{
@@ -76,9 +107,38 @@
 			letter-spacing: 1px;
 			padding: 5px 15px 3px;
 			border-bottom: 1px solid #a6a6a6;
+/*			&:hover{
+				background: @dark_grey;
+				color: @white;
+			}*/
+		}
+		.front{
+			padding: 5px 15px 3px;
+			a{
+				font-family: 'bebas_neue_regular';
+				letter-spacing: 1px;
+				font-size: 15px;
+				color: @black;
+				text-decoration: none;
+				border-bottom: 1px solid #a6a6a6;
+			}
+		}
+		.back a{
+			color: @white;
+			text-decoration: none;
+			background: @dark_grey;
+		}
+	}
+}
+.no-csstransforms, .no-csstransforms3d{
+	.menu{
+		.back a{
+			text-decoration: underline;
+			background: transparent;
 			&:hover{
 				background: @dark_grey;
 				color: @white;
+				text-decoration: none;
 			}
 		}
 	}
