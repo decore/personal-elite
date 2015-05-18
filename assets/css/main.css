@@ -4142,7 +4142,9 @@ span.error {
   display: inline-block;
   width: 410px;
   padding: 40px 0;
+  /*display: none;*/
   height: 0;
+  opacity: 0;
 }
 .slider-block .bxslider .slider__info p {
   font-size: 30px;

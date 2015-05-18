@@ -27,11 +27,11 @@ $(document).ready(function() {
 		controls: false,
 		adaptiveHeight: false,
 		onSliderLoad: function () {
-			$('.bxslider>li').eq(0).addClass('active-slide');
+			$('.bxslider>li').eq(0).addClass('active-slide').find('.slider__info').animate({height: '700', opacity: '1'}, 2500, 'easeInCubic');
 		},
 		onSlideAfter: function (currentSlideNumber, totalSlideQty, currentSlideHtmlObject) {
 			$('.bxslider>li').eq(currentSlideHtmlObject ).addClass('active-slide').siblings().removeClass('active-slide');
-			$('.bxslider>li').eq(currentSlideHtmlObject ).find('.slider__info').animate({ height: 'show'}, 'slow');
+			$('.bxslider>li').eq(currentSlideHtmlObject ).find('.slider__info').animate({height: '700', opacity: '1'}, 2500, 'easeInCubic');
 		},
 	 }).mouseenter(function(){
 		slider.stopAuto();
