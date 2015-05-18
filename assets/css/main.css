@@ -3628,7 +3628,7 @@ input[type="submit"] {
   outline: none;
 }
 .button-styled {
-  border: 2px solid #fedf7f;
+  border: 2px solid #fedf7f !important;
 }
 .button-styled:hover,
 .button-styled:focus {
@@ -3910,6 +3910,7 @@ span.error {
 }
 .header-top .buttons-group {
   text-align: right;
+  margin-top: 12px;
 }
 .header-top .buttons-group .button {
   margin-left: 12px;
@@ -4025,7 +4026,7 @@ span.error {
 }
 .header-bottom .button-wrap {
   width: 300px;
-  height: 50px;
+  height: 60px;
   overflow: hidden;
   margin: 0 auto;
   border-radius: 30px;
@@ -4035,18 +4036,18 @@ span.error {
   z-index: 1;
 }
 .header-bottom .button-wrap .button-3d {
-  height: 50px;
+  height: 60px;
   background: #fedf7f;
 }
 .header-bottom .button-wrap .front {
   background: #fedf7f;
   width: 300px;
-  height: 50px;
+  height: 60px;
 }
 .header-bottom .button-wrap .back {
   width: 300px;
   background: #272727;
-  height: 50px;
+  height: 60px;
 }
 .header-bottom .button-wrap .back a {
   color: #fedf7f;
@@ -4059,7 +4060,8 @@ span.error {
   width: 300px;
   color: #000000;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 15px 20px;
+  border-bottom: 0;
 }
 .no-csstransforms .menu__link {
   text-decoration: underline;
