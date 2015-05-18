@@ -3635,6 +3635,7 @@ input[type="submit"] {
   background: #fedf7f;
   color: #000000;
 }
+.no-csstransforms3d .front,
 .no-csstransforms .front {
   display: none;
 }
@@ -3644,7 +3645,7 @@ input[type="submit"] {
   margin: 0 auto;
   height: 40px;
   -webkit-transition: -webkit-transform 0.3s;
-  transition: transform .5s;
+  transition: transform .3s;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
@@ -3655,16 +3656,26 @@ input[type="submit"] {
   cursor: pointer;
 }
 .button-3d .front {
-  -webkit-transform: translateZ(20px);
   transform: translateZ(20px);
+  -webkit-transform: translateZ(20px);
+  -moz-transform: translateZ(20px);
+  -o-transform: translateZ(20px);
+  -ms-transform: translateZ(20px);
 }
 .button-3d .back {
-  -webkit-transform: rotateX(-90deg) translateZ(-20px);
   transform: rotateX(-90deg) translateZ(-20px);
+  -webkit-transform: rotateX(-90deg) translateZ(-20px);
+  -moz-transform: rotateX(-90deg) translateZ(-20px);
+  -o-transform: rotateX(-90deg) translateZ(-20px);
+  -ms-transform: rotateX(-90deg) translateZ(-20px);
 }
 .button-3d:hover {
-  -webkit-transform: rotateX(89deg);
   transform: rotateX(89deg);
+  -webkit-transform: rotateX(89deg);
+  -moz-transform: rotateX(89deg);
+  -o-transform: rotateX(89deg);
+  -ms-transform: rotateX(89deg);
+  height: 40px;
 }
 /*.button-3d{
 	width: auto;
@@ -3782,7 +3793,6 @@ input[type="submit"] {
   padding: 35px 60px;
   background-image: url('../img/border.png');
   background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/border.png', sizingMethod='scale');
   background-size: 100% 100%;
 }
 .form__legend {
@@ -4013,12 +4023,12 @@ span.error {
   color: #ffffff;
 }
 .header-bottom .menu__item .back a {
+  background: rgba(65, 65, 65, 0.8);
   color: #ffffff;
 }
 .header-bottom .menu__link {
   color: #ffffff;
   padding: 10px 20px;
-  background: rgba(65, 65, 65, 0.8);
   text-decoration: none;
 }
 .header-bottom .menu-bottom {
@@ -4064,12 +4074,16 @@ span.error {
   padding: 15px 20px;
   border-bottom: 0;
 }
-.no-csstransforms .menu__link {
+.no-csstransforms .menu .back a,
+.no-csstransforms3d .menu .back a {
   text-decoration: underline;
+  background: transparent;
 }
-.no-csstransforms .menu__link:hover {
+.no-csstransforms .menu .back a:hover,
+.no-csstransforms3d .menu .back a:hover {
   background: #6b6b6b;
   color: #ffffff;
+  text-decoration: none;
 }
 .slider-block .slider-wrap {
   width: 1024px;

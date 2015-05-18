@@ -307,7 +307,8 @@ input[type="submit"] {
 		}
 	}
 }
-.no-csstransforms{
+.no-csstransforms3d,
+.no-csstransforms, {
 	.front{
 		display: none;
 	}
@@ -318,7 +319,7 @@ input[type="submit"] {
 	margin: 0 auto;
 	height: 40px;
 	-webkit-transition: -webkit-transform .3s;
-	transition: transform .5s; 
+	transition: transform .3s; 
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 	.front, .back {
@@ -327,16 +328,14 @@ input[type="submit"] {
 		cursor: pointer;
 	}
 	.front {
-		-webkit-transform: translateZ(20px);
-		transform: translateZ(20px);
+		.transform(translateZ(20px));
 	}
 	.back {
-		-webkit-transform: rotateX(-90deg) translateZ(-20px);
-		transform: rotateX(-90deg) translateZ(-20px);
+		.transform(rotateX(-90deg) translateZ(-20px));
 	}
 	&:hover {
-		-webkit-transform: rotateX(89deg);
-		transform: rotateX(89deg);
+		.transform(rotateX(89deg));
+		height: 40px;
 	}
 }
 
@@ -446,7 +445,6 @@ input[type="submit"] {
 	padding: 35px 60px;
 	background-image: url('../img/border.png');
 	background-repeat: no-repeat;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/border.png', sizingMethod='scale');
 	background-size: 100% 100%;
 	&__legend{
 		margin: 0 auto;
