@@ -1,0 +1,179 @@
+.header{
+	background: @olive;
+	background-image: url('../img/bg-img.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	.box-inner{
+		height: 775px;
+		padding: 20px 0;
+	}
+}
+.header-top{
+	height: 60px;
+	.menu{
+		height: 60px;
+		.menu__item{
+			&.active{
+				.button-3d {
+					.transform(rotateX(89deg));
+				}
+				.menu__link{
+					background: @yellow;
+					color: @black;
+				}
+			}
+			&+.menu__item{
+				margin-left: 25px;
+			}
+			.front{
+				padding: 10px 20px;
+				font-family: 'bebas_neue_regular';
+				letter-spacing: 1.7px;
+				font-size: 17px;
+				padding: 10px 15px;
+				a{
+					text-decoration: underline;
+					color: @yellow;
+				}
+			}
+			.back a{
+				color: @white;
+				text-decoration: none;
+			}
+		}
+		.menu__link{
+			color: @yellow;
+			background: rgba( 65,65,65,0.8 );
+		}
+	}
+	.buttons-group{
+		text-align: right;
+		.button{
+			margin-left: 12px;
+		}
+	}
+}
+.header-middle{
+	.info{
+		&__title{
+			color: @light_grey;
+			font-size: 12px;
+			margin-bottom: 10px;
+		}
+		&__address{
+			color: @yellow;
+		}
+		&__link{
+			color: @yellow;
+			font-size: 14px;
+		}
+		&__phone{
+			color: @white;
+			font-size: 16px;
+			font-weight: 600;
+			text-decoration: none;
+			display: block;
+		}
+		&__text{
+			color: @white;
+			font-size: 12px;
+		}
+	}
+	.info-middle{
+		margin-left: 35px;
+	}
+	.logo{
+		display: block;
+		margin-top: 75px;
+		&__text{
+			font-weight: 300;
+			color: @white;
+			font-size: 18px;
+			margin: 30px 0 165px;
+			padding: 0 35px;
+			line-height: 1.4em;
+		}
+	}
+}
+.header-bottom{
+	.menu-top{
+		display: table;
+		width: 100%;
+	}
+	.menu{
+		display: table-row;
+		&__item{
+			display: table-cell;
+			&+.menu__item{
+				.menu__link{
+					margin-left: 5px;
+				}
+			}
+			&.active{
+				.button-3d {
+					.transform(rotateX(89deg));
+				}
+				.menu__link{
+					background: @yellow;
+					color: @black;
+				}
+			}
+			.front{
+				padding: 10px 20px;
+				font-family: 'bebas_neue_regular';
+				letter-spacing: 1.7px;
+				font-size: 17px;
+				padding: 10px 15px;
+				a{
+					text-decoration: underline;
+					color: @white;
+				}
+			}
+			.back a{
+				color: @white;
+			}
+		}
+		&__link{
+			color: @white;
+			padding: 10px 20px;
+			background: rgba( 65,65,65,0.8 );
+			text-decoration: none;
+		}
+	}
+	.menu-bottom{
+		display: table;
+		margin: 20px auto 30px;
+	}
+	.button{
+		.border-radius(30px);
+		border: 0;
+		background: @yellow;
+		font-family: 'bebas_neue_regular';
+		font-size: 30px;
+		line-height: 1em;
+		display: block;
+		width: 300px;
+		margin: 0 auto;
+		padding: 15px 42px;
+		text-align: center;
+		text-decoration: none;
+		color: @black;
+		position: relative;
+		z-index: 1;
+		&:hover, &:focus{
+			background: @black_grey;
+			color: @yellow;
+		}
+	}
+}
+.no-csstransforms{
+	.menu{
+		&__link{
+			text-decoration: underline;
+			&:hover{
+				background: @dark_grey;
+				color: @white;
+			}
+		}
+	}
+}
