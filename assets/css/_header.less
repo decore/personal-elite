@@ -144,7 +144,7 @@
 		display: table;
 		margin: 20px auto 30px;
 	}
-	.button{
+/*	.button{
 		.border-radius(30px);
 		border: 0;
 		background: @yellow;
@@ -163,6 +163,42 @@
 		&:hover, &:focus{
 			background: @black_grey;
 			color: @yellow;
+		}
+	}*/
+	.button-wrap{
+		width: 300px;
+		height: 50px;
+		overflow: hidden;
+		margin: 0 auto;
+		.border-radius(30px);
+		position: relative;
+		z-index: 1;
+		.button-3d{
+			height: 50px;
+			background: @yellow;
+		}
+		.front{
+			background: @yellow;
+			width: 300px;
+			height: 50px;
+		}
+		.back{
+			width: 300px;
+			background: @black_grey;
+			height: 50px;
+			a{
+				color: @yellow;
+			}
+		}
+		a{
+			font-family: 'bebas_neue_regular';
+			font-size: 30px;
+			line-height: 1em;
+			display: block;
+			width: 300px;
+			color: @black;
+			text-decoration: none;
+			padding: 10px 20px;
 		}
 	}
 }

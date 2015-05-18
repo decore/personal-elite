@@ -58,6 +58,4 @@ $(document).ready(function() {
 	$(".form-top .box-inner").parallax({ speed : 0.1 });
 	$(".form-bottom .box-inner").parallax({ speed : 0.1 });
 
-
-
 });

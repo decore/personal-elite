@@ -3952,6 +3952,29 @@ span.error {
   padding: 0 35px;
   line-height: 1.4em;
 }
+.header-bottom {
+  /*	.button{
+		.border-radius(30px);
+		border: 0;
+		background: @yellow;
+		font-family: 'bebas_neue_regular';
+		font-size: 30px;
+		line-height: 1em;
+		display: block;
+		width: 300px;
+		margin: 0 auto;
+		padding: 15px 42px;
+		text-align: center;
+		text-decoration: none;
+		color: @black;
+		position: relative;
+		z-index: 1;
+		&:hover, &:focus{
+			background: @black_grey;
+			color: @yellow;
+		}
+	}*/
+}
 .header-bottom .menu-top {
   display: table;
   width: 100%;
@@ -4000,29 +4023,43 @@ span.error {
   display: table;
   margin: 20px auto 30px;
 }
-.header-bottom .button {
+.header-bottom .button-wrap {
+  width: 300px;
+  height: 50px;
+  overflow: hidden;
+  margin: 0 auto;
   border-radius: 30px;
   -moz-border-radius: 30px;
   -webkit-border-radius: 30px;
-  border: 0;
+  position: relative;
+  z-index: 1;
+}
+.header-bottom .button-wrap .button-3d {
+  height: 50px;
   background: #fedf7f;
+}
+.header-bottom .button-wrap .front {
+  background: #fedf7f;
+  width: 300px;
+  height: 50px;
+}
+.header-bottom .button-wrap .back {
+  width: 300px;
+  background: #272727;
+  height: 50px;
+}
+.header-bottom .button-wrap .back a {
+  color: #fedf7f;
+}
+.header-bottom .button-wrap a {
   font-family: 'bebas_neue_regular';
   font-size: 30px;
   line-height: 1em;
   display: block;
   width: 300px;
-  margin: 0 auto;
-  padding: 15px 42px;
-  text-align: center;
-  text-decoration: none;
   color: #000000;
-  position: relative;
-  z-index: 1;
-}
-.header-bottom .button:hover,
-.header-bottom .button:focus {
-  background: #272727;
-  color: #fedf7f;
+  text-decoration: none;
+  padding: 10px 20px;
 }
 .no-csstransforms .menu__link {
   text-decoration: underline;
