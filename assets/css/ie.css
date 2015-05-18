@@ -1,4 +1,20 @@
+.menu .back a{
+	background: transparent;
+}
+.menu .back a:hover{
+	background: @dark_grey;
+	color: @white;
+	text-decoration: none !important;
+}
+.menu .front{
+	display: none !important;
+}
+
 .form-block .form{
 	background-image: none;
 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/border.png', sizingMethod='scale');
+}
+
+.footer .info-middle .info__phone{
+	font-size: 14px !important;
 }

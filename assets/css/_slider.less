@@ -3,7 +3,14 @@
 		width: 1024px;
 		margin: 0 auto;
 		height: 870px;
-		overflow: hidden;
+		/*overflow-y: hidden;*/
+	}
+	.bx-wrapper{
+		margin: 0 auto;
+		box-sizing: border-box;
+	}
+	.bx-viewport{
+		overflow: visible !important;
 	}
 	.bxslider{
 		list-style: none;
@@ -35,6 +42,7 @@
 			display: inline-block;
 			width: 410px;
 			padding: 40px 0;
+			height: 0;
 			p{
 				font-size: 30px;
 				line-height: 1.2em;
@@ -71,5 +79,10 @@
 		line-height: 1.1em;
 		width: 350px;
 		padding-bottom: 63px;
+	}
+}
+.no-js{
+	.slider-wrap{
+		height: auto;
 	}
 }

@@ -17,12 +17,12 @@ $(document).ready(function() {
 	//slider
 	var $slider = $(".bxslider");
 	var slider=$slider.bxSlider({
-		mode: 'vertical',
+		mode: 'fade',
 		infiniteLoop: false,
 		auto: true,
 		pause: 5000,
 		ease: "swing",
-		speed: 2000,
+		speed: 0,
 		pager: 'true',
 		controls: false,
 		adaptiveHeight: false,
@@ -31,6 +31,7 @@ $(document).ready(function() {
 		},
 		onSlideAfter: function (currentSlideNumber, totalSlideQty, currentSlideHtmlObject) {
 			$('.bxslider>li').eq(currentSlideHtmlObject ).addClass('active-slide').siblings().removeClass('active-slide');
+			$('.bxslider>li').eq(currentSlideHtmlObject ).find('.slider__info').animate({ height: 'show'}, 'slow');
 		},
 	 }).mouseenter(function(){
 		slider.stopAuto();
