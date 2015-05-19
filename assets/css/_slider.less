@@ -5,83 +5,57 @@
 		height: 870px;
 		/*overflow-y: hidden;*/
 	}
-	.bx-wrapper{
-		margin: 0 auto;
-		box-sizing: border-box;
+	.owl-carousel{
+		padding: 80px 0;
+		height: 870px;
 	}
-	.bx-viewport{
-		overflow: visible !important;
+	.slider-left{
+		width: 575px;
 	}
-	.bxslider{
-		list-style: none;
-		padding: 0;
-		.slider__item{
-			padding: 80px 0;
-			height: 870px;
-		}
-		.slider__item{
-			&.active-slide{
-				.slider__img{
-					.transform(rotateY(360deg));
-					.transition(1s);
-				}
-				.slider__info{
-				/*	display: block;
-					.transition(display 0.5s);*/
-				}
-			}
-		}
-		.slider__img{
-			float: left;
-			width: 575px;
-			height: 572px;
-			display: inline-block;
-			.transform(rotateY(180deg));
-		}
+	.slider-right{
+		width: 470px;
 		.slider__info{
-			display: inline-block;
-			width: 410px;
 			padding: 40px 0;
-			/*display: none;*/
-			height: 0;
-			opacity: 0;
-			p{
-				font-size: 30px;
-				line-height: 1.2em;
-				padding: 28px 0 38px;
-			}
-			img{
-				margin: 0 auto;
-				height: 80px;
-			}
-			.mouse{
-				margin-top: 75px;
-				height: 60px;
+		}
+		p{
+			font-size: 30px;
+			line-height: 1.2em;
+			padding: 5px 0 38px;
+		}
+		img{
+			margin: 0 auto;
+			height: 80px;
+		}
+		.sprite{
+			margin: 0 auto;
+		}
+		.sprite-mouse{
+			margin-top: 50px;
+			height: 60px;
+		}
+		h2{
+			color: @dark_red;
+			line-height: 1.1em;
+			width: 350px;
+			padding-bottom: 63px;
+			margin: 0 auto;
+		}
+		.owl-controls{
+			position: absolute;
+			top: 387px;
+			right: -15px;
+		}
+		.owl-page{
+			background: transparent;
+			border: 1px solid @yellow;
+			width: 14px;
+			height: 14px;
+			margin: 12px 0;
+			.border-radius(7px);
+			&.active, &:hover{
+				background: @yellow;
 			}
 		}
-	}
-	.bx-controls{
-		position: absolute;
-		top: 445px;
-		right: 20px;
-	}
-	.bx-pager.bx-default-pager a{
-		background: transparent;
-		border: 1px solid @yellow;
-		width: 14px;
-		height: 14px;
-		margin: 5px;
-		.border-radius(7px);
-		&.active, &:hover{
-			background: @yellow;
-		}
-	}
-	h2{
-		color: @dark_red;
-		line-height: 1.1em;
-		width: 350px;
-		padding-bottom: 63px;
-		margin: 0 auto;
 	}
 }
 .no-js{

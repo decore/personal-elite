@@ -5,9 +5,23 @@
 		top: -15px;
 		right: 0;
 	}
-	.wrap-box{
+	.form-wrap{
 		width: 867px;
-		margin: 0 auto;
+		background: @white;
+		&:before{
+			top: -112px;
+		}
+		&:after{
+			top: -112px;
+		}
+	}
+	.form{
+		&:before{
+			left: -112px;
+		}
+		&:after{
+			left: -112px;
+		}
 	}
 	&.form-top{
 		background-image: url('../img/bg-img2.jpg');
@@ -29,6 +43,11 @@
 		.box-inner{
 			padding: 35px 0;
 			min-height: 670px;
+		}
+		.form-wrap{
+			&:before, &:after{
+				top: -100px;
+			}
 		}
 		textarea, input{
 			width: 480px;
