@@ -16,15 +16,22 @@
 		.menu__item{
 			&.active{
 				.button-3d {
-					.transform(rotateX(89deg));
+					.transform(rotateX(0));
 				}
-				.menu__link{
+				.front{
 					background: @yellow;
-					color: @black;
+					a{
+						color: @black !important;
+						cursor: default;
+						border-bottom: 0;
+					}
 				}
 			}
 			&+.menu__item{
 				margin-left: 25px;
+			}
+			.button-3d{
+				height: 40px;
 			}
 			.front{
 				padding: 10px 20px;
@@ -32,6 +39,7 @@
 				letter-spacing: 1.7px;
 				font-size: 17px;
 				padding: 10px 15px;
+				.border-radius(4px);
 				a{
 					color: @yellow;
 					text-decoration: none;
@@ -108,18 +116,23 @@
 		&__item{
 			display: table-cell;
 			&+.menu__item{
-				.menu__link{
-					margin-left: 5px;
-				}
+				padding-left: 5px;
 			}
 			&.active{
 				.button-3d {
-					.transform(rotateX(89deg));
+					.transform(rotateX(0));
 				}
-				.menu__link{
+				.front{
 					background: @yellow;
-					color: @black;
+					a{
+						color: @black !important;
+						cursor: default;
+						border-bottom: 0;
+					}
 				}
+			}
+			.button-3d{
+				height: 40px;
 			}
 			.front{
 				padding: 10px 20px;
@@ -127,6 +140,7 @@
 				letter-spacing: 1.7px;
 				font-size: 17px;
 				padding: 10px 15px;
+				.border-radius(4px);
 				a{
 					text-decoration: none;
 					color: @white;
@@ -208,13 +222,21 @@
 	}
 }
 .no-csstransforms, .no-csstransforms3d{
-	.menu{
-		.back a{
-			text-decoration: underline;
-			background: transparent;
-			&:hover{
-				background: @dark_grey;
-				color: @white;
+	.header{
+		.menu{
+			.back a{
+				text-decoration: underline;
+				background: transparent;
+				&:hover{
+					background: @dark_grey;
+					color: @white;
+					text-decoration: none;
+				}
+			}
+			.menu__item.active a{
+				background: @yellow !important;
+				color: @black !important;
+				cursor: default;
 				text-decoration: none;
 			}
 		}

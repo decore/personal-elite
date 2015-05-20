@@ -11,17 +11,19 @@
 			&__item{
 				display: table-cell;
 				&+.menu__item{
-					.menu__link{
-						margin-left: 3px;
-					}
+					padding-left: 3px;
 				}
 				&.active{
 					.button-3d {
-						.transform(rotateX(89deg));
+						.transform(rotateX(0deg));
 					}
-					 .menu__link{
+					.front{
 						background: @dark_red;
-						color: @white;
+						a{
+							color: @white !important;
+							cursor: default;
+							border-bottom: 0;
+						}
 					}
 				}
 			}
@@ -36,8 +38,12 @@
 					color: @white;
 				}
 			}
+			.button-3d{
+				height: 30px;
+			}
 			.front{
-				padding: 5px 10px 3px 9px;
+				padding: 5px 8px 3px 8px;
+				.border-radius(4px);
 				a{
 					font-family: 'bebas_neue_regular';
 					letter-spacing: 1px;
@@ -47,10 +53,12 @@
 					border-bottom: 1px solid #a6a6a6;
 				}
 			}
-			.back a{
-				color: @white;
-				text-decoration: none;
+			.back{
 				background: @dark_grey;
+				a{
+					color: @white;
+					text-decoration: none;
+				}
 			}
 		}
 	}
@@ -93,11 +101,15 @@
 			margin-right: 10px;
 			&.active{
 				.button-3d {
-					.transform(rotateX(89deg));
+					.transform(rotateX(0deg));
 				}
-				.menu__link{
-					color: @white;
-					background: @dark_red;
+				.front{
+						background: @dark_red;
+					a{
+						color: @white !important;
+						cursor: default;
+						border-bottom: 0;
+					}
 				}
 			}
 		}
@@ -107,13 +119,13 @@
 			letter-spacing: 1px;
 			padding: 5px 15px 3px;
 			border-bottom: 1px solid #a6a6a6;
-/*			&:hover{
-				background: @dark_grey;
-				color: @white;
-			}*/
+		}
+		.button-3d{
+			height: 30px;
 		}
 		.front{
 			padding: 5px 15px 3px;
+			.border-radius(4px);
 			a{
 				font-family: 'bebas_neue_regular';
 				letter-spacing: 1px;
@@ -123,21 +135,35 @@
 				border-bottom: 1px solid #a6a6a6;
 			}
 		}
-		.back a{
+		.back{
+			background: @dark_grey;
+		}
+			a{
 			color: @white;
 			text-decoration: none;
-			background: @dark_grey;
 		}
 	}
 }
 .no-csstransforms, .no-csstransforms3d{
-	.menu{
-		.back a{
-			text-decoration: underline;
-			background: transparent;
-			&:hover{
-				background: @dark_grey;
-				color: @white;
+	.footer{
+		.menu{
+			.back{
+					background: transparent;
+				a{
+					text-decoration: underline;
+					color: @black;
+					border-bottom: 0;
+					&:hover{
+						color: @white;
+						text-decoration: none;
+						background: @dark_grey;
+					}
+				}
+			}
+			.menu__item.active a{
+				background: @dark_red !important;
+				color: @white !important;
+				cursor: default;
 				text-decoration: none;
 			}
 		}

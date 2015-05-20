@@ -62,6 +62,27 @@
 .transform (...) {
 	transform:@arguments; -webkit-transform:@arguments; -moz-transform:@arguments; -o-transform:@arguments; -ms-transform:@arguments;
 }
+/*.transform-multiple (...) {
+	-webkit-transform: @arguments; -moz-transform: @arguments; -o-transform: @arguments; transform: @arguments;
+}*/
+.perspective(...){
+	-webkit-perspective: @arguments;
+	-moz-perspective: @arguments;
+	-o-perspective: @arguments;
+	-ms-perspective: @arguments;
+}
+.transform-style(...){
+	-webkit-transform-style: @arguments;
+	-moz-transform-style: @arguments;
+	-o-transform-style: @arguments;
+	-ms-transform-style: @arguments;
+}
+.transform-origin(...){
+	-webkit-transform-origin: @arguments;
+	-moz-transform-origin: @arguments;
+	-o-transform-origin: @arguments;
+	-ms-transform-origin: @arguments;
+}
 .opacity (@opacity: 0.5) {
 	-moz-opacity: @opacity;
 	-khtml-opacity: @opacity;

@@ -1,8 +1,9 @@
-.menu .back a{
+.menu .back .menu__link{
 	background: transparent;
 }
+
 .menu .back a:hover{
-	background: @dark_grey;
+	/*background: @dark_grey;*/
 	color: @white;
 	text-decoration: none !important;
 }
