@@ -3,7 +3,6 @@
 }
 
 .menu .back a:hover{
-	/*background: @dark_grey;*/
 	color: @white;
 	text-decoration: none !important;
 }
